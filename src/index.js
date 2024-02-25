@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
 import LoginForm from '../src/LoginPage/loginpage';
-import Product from './comp/product'
+import ListProduct from './comp/listProduct'
 
 
 
@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>} />
-      <Route path="/Product" element={<Product/>}/>
+      <Route path="/Product" element={<ListProduct/>}/>
       <Route path="/Login" element={<LoginForm />} />
     </Routes>
     </BrowserRouter>
