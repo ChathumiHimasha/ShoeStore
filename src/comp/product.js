@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ProductData from './productData'
 import { IoIosCloseCircle } from "react-icons/io";
 import './style.css'
+import Nav from './nav'
 
 const Product = () => {
     const [detail, setDetail] = useState([]);
@@ -12,7 +13,9 @@ const Product = () => {
         setClose(true)
     }
     return(
+        
         <> 
+       
        {
         close ?
         <div className='detail_container'>
@@ -23,6 +26,7 @@ const Product = () => {
                 {
                     return(
                         <>
+                         
                         <div className='detail_info'>
                             <div className='img-box'>
                                 <img src={x.img} alt={x.Title}></img>
