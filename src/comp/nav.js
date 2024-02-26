@@ -1,26 +1,21 @@
-import React from 'react'
-import './style.css'
-import {Link} from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import './style.css';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
-    return(
-        <>
+    return (
         <div className='header'>
             <div className='logo'>
                 <h2>Lady<span>Lily Shoes</span></h2>
             </div>
             <ul>
-                <BrowserRouter>
-                <li><Link className='Link' href='#'>Home</Link></li>
-                <li><Link className='Link' href='#'>Product</Link></li>
-                <li><Link className='Link' href='#'>About</Link></li>
-                <li><Link className='Link' href='#'>Contact</Link></li>
-                </BrowserRouter>
+                <li><Link className='Link' to='/'>Home</Link></li>
+                <li><Link className='Link' to='/products'>Products</Link></li>
+                <li><Link className='Link' to='/about'>About</Link></li>
+                <li><Link className='Link' to='/contact'>Contact</Link></li>
             </ul>
         </div>
-        </>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;
