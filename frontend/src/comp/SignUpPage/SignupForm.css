@@ -5,19 +5,17 @@
   height: 50px;
 }
 
-
-
 .wrapper {
   width: 420px;
   background: transparent;
-  background-color: #565555;
+  background-color: #25212182;
   border: 2px solid rgba(255,255,255, .2);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   backdrop-filter: blur(30px);
   color: #151414;
   border-radius: 10px;
   padding: 30px 40px;
-  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fdimodashoes.ie%2F&psig=AOvVaw1Ir1c9i5iMsOIBBHTcqUft&ust=1709013483052000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNjE7r6pyIQDFQAAAAAdAAAAABAm');
+  
 }
 
 .wrapper h1{
@@ -36,7 +34,7 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  border: 2px solid rgba(255,255,255, .2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   outline: none;
   border-radius: 40px;
   font-size: 16px;
@@ -88,6 +86,10 @@
   font-size: 16px;
   color: #333;
   font-weight: 700;
+}
+
+.wrapper button:active {
+  background-color:rgba(255,255,255, .2); /* Change to the desired color */
 }
 
 .wrapper .register-link {

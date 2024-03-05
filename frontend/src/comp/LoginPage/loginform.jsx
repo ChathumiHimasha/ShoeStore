@@ -5,20 +5,34 @@ import { FaLock } from "react-icons/fa";
 
 const LoginForm = () => {
     
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
         event.preventDefault();
         
         const username = event.target.elements.username.value;
         const password = event.target.elements.password.value;
-
-        if (username === 'user' && password === 'user123') {
-            // If correct, navigate to '/shop'
-            window.location.href = '/shop';
-        } else {
-            // If incorrect, you might display an error message
-            alert('Invalid username or password');
+    
+        try {
+            const response = await fetch('http://localhost:8080/users');
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+            }
+            const users = await response.json();
+    
+            // Check if any user with the provided username exists
+            const user = users.find(user => user.username === username);
+    
+            // If a user with the provided username is found and the password matches, navigate to '/shop'
+            if (user && user.password === password) {
+                window.location.href = '/shop';
+            } else {
+                alert('Invalid username or password');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to authenticate. Please try again later.');
         }
     };
+    
 
     return (
         <div className='container'>
